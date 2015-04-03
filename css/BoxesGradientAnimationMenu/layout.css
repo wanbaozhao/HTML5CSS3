@@ -1,0 +1,38 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+body {
+	background: #E4FFCF url(../../img/BoxesGradientAnimationMenu/wood.jpg) no-repeat top center;
+	font-family: Futura, "Century Gothic", AppleGothic, sans-serif;
+	overflow: hidden;
+}
+h1 {
+	color: #fff;
+	margin: 40px 0px 20px 40px;
+	text-shadow: 1px 1px 1px #555;
+	font-weight: normal;
+}
+a.back {
+	position: absolute;
+	bottom: 5px;
+	right: 5px;
+}
+.reference {
+	position: absolute;
+	bottom: 5px;
+	left: 5px;
+}
+.reference p a,
+a.back {
+	text-transform: uppercase;
+	text-shadow: 1px 1px 1px #fff;
+	color: #666;
+	text-decoration: none;
+	font-size: 16px;
+	font-weight: bold;
+}
+.reference p a:hover,
+a.back:hover {
+	color: #000;
+}
