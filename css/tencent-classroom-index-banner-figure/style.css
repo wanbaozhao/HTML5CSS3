@@ -1,0 +1,85 @@
+/**
+	作者：1028282161@qq.com[雪地伤孤：java工程师，现在主要以H5开发为主]
+	时间：2015-04-04
+	个人技术微信：zwb1028282161
+	个人技术QQ:1028282161
+	个人技术公众账号：zwb_h5c3（关注有更多的前后端技术资料以及源码）
+	描述： 个人h5技术demo练习 
+ */
+
+* {
+	margin: 0;
+	padding: 0;
+}
+.big {
+	width: 100%;
+	height: 300px;
+	background: #D8CBFF;
+	margin-top: 50px;
+}
+.con {
+	width: 760px;
+	height: 300px;
+	margin: 0 auto;
+	position: relative;
+}
+.pic {
+	width: 760px;
+	height: 300px;
+	position: relative;
+}
+.pic img {
+	width: 760px;
+	height: 300px;
+	position: absolute;
+	display: none;
+}
+.list {
+	width: 126px;
+	height: 10px;
+	background: rgba(0, 0, 0, .1);
+	position: absolute;
+	bottom: 15px;
+	left: 310px;
+	border-radius: 12px;
+	padding: 7px 4px;
+}
+.list li {
+	width: 8px;
+	height: 8px;
+	border: 1px solid #fff;
+	list-style: none;
+	float: left;
+	margin: 0 4px;
+	border-radius: 50%;
+	cursor: pointer;
+}
+.list .hov {
+	background: #fff;
+}
+.but li {
+	list-style: none;
+	width: 50px;
+	height: 70px;
+	cursor: pointer;
+	color: #fff;
+	font-size: 34px;
+	text-align: center;
+	line-height: 70px;
+	font-weight: 700;
+	position: absolute;
+	top: 100px;
+	display: none;
+}
+.but li:hover {
+	background: rgba(0, 0, 0, .2);
+}
+.but .left {
+	left: 20px;
+}
+.but .right {
+	right: 20px;
+}
+.con:hover .but li {
+	display: block;
+}
