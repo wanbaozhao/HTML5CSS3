@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>顶部悬浮导航</title>
+		<link rel="stylesheet" href="../css/DingBuDaoHang/DingBuDaoHang.css" />
+	</head>
+
+	<body>
+		<div class="content"></div>
+		<div class="top">
+			<div class="main">
+				<div class="logo">
+					<img src="../img/DingBuDaoHang/logo.png" />
+				</div>
+				<div class="nav">
+					<ul>
+						<li><a href="#">首页</a>
+						</li>
+						<li class="hov">
+							<a href="#">课程</a>
+							<div class="hid">
+								<ul>
+									<li><a href="#">网页制作</a>
+									</li>
+									<li><a href="#">ps</a>
+									</li>
+									<li><a href="#">摄影</a>
+									</li>
+									<li><a href="#">淘宝电商</a>
+									</li>
+									<li><a href="#">Java</a>
+									</li>
+									<li><a href="#">CAD制图</a>
+									</li>
+									<li><a href="#">影视后期</a>
+									</li>
+									<li><a href="#">C++/PHP</a>
+									</li>
+								</ul>
+							</div>
+						</li>
+						<li class="hov">
+							<a href="#">老师</a>
+							<div class="hid">
+								<ul>
+									<li><a href="http://wpa.qq.com/msgrd?v=3&uin=635900003&site=qq&menu=yes">冰淇淋老师</a>
+									</li>
+									<li><a href="#">阿飞老师</a>
+									</li>
+									<li><a href="#">清心老师</a>
+									</li>
+									<li><a href="#">零曦老师</a>
+									</li>
+									<li><a href="#">木子老师</a>
+									</li>
+									<li><a href="#">黄河老师</a>
+									</li>
+									<li><a href="#">晴雪老师</a>
+									</li>
+
+								</ul>
+							</div>
+						</li>
+						<li><a href="#">论坛</a>
+						</li>
+						<li><a href="#">咨询</a>
+						</li>
+						<li><a href="#">公告</a>
+						</li>
+					</ul>
+				</div>
+				<div class="login">
+					<a href="" class="a1">登录</a><a href="" class="a2">注册</a>
+				</div>
+			</div>
+		</div>
+
+		<div style="width:100%;height:500px;background:#ffccff;"></div>
+		<div style="width:100%;height:500px;background:#ffcc66;"></div>
+		<div style="width:100%;height:500px;background:#99cc33;"></div>
+		<div style="width:100%;height:500px;background:#66ff99;"></div>
+		<div style="width:100%;height:500px;background:#cccc66;"></div>
+		<div style="width:100%;height:500px;background:#3366cc;"></div>
+		<script src="../js/jQuery1.11.1.js"></script>
+		<script>
+			var topCon = $(".content").height();
+			$(window).scroll(function(){
+				var topScr = $(window).scrollTop();
+				if(topScr > topCon){
+					$(".top").addClass("fixed");
+				}else{
+					$(".top").removeClass("fixed");
+				}
+			});
+		</script>
+	</body>
+
+</html>

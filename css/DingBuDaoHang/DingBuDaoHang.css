@@ -1,0 +1,101 @@
+* {
+	margin: 0;
+	padding: 0;
+	font-family: 'Microsoft yahei';
+}
+.content {
+	width: 100%;
+	height: 100px;
+	background: #9933cc;
+}
+.top {
+	width: 100%;
+	height: 60px;
+	background: #15171F;
+	position: absolute;
+	top: 100px;
+}
+.main {
+	width: 1140px;
+	height: 60px;
+	margin: 0 auto;
+}
+.logo {
+	width: 103px;
+	height: 28px;
+	float: left;
+	margin: 20px 0 0 16px;
+}
+.nav {
+	width: 500px;
+	height: 60px;
+	float: left;
+	margin-left: 100px;
+}
+.nav ul li {
+	float: left;
+	list-style-type: none;
+	line-height: 60px;
+	padding: 0 26px;
+	text-align: center;
+	font-size: 14px;
+}
+.nav ul li a {
+	color: #fff;
+	text-decoration: none;
+}
+.nav .hid {
+	width: 100%;
+	position: absolute;
+	left: 0;
+	background: #00cece;
+	display: none;
+}
+.nav .hov:hover {
+	background: #00cece;
+}
+.nav .hov:hover .hid {
+	display: block;
+}
+.nav .hid ul {
+	width: 1140px;
+	margin: 0 auto;
+}
+.nav .hid ul a {
+	color: #000;
+}
+.nav .hid ul a:hover {
+	color: #fff;
+	text-decoration: underline;
+}
+.login {
+	width: 120px;
+	height: 30px;
+	float: right;
+	margin: 14px 20px 0 0;
+}
+.login a {
+	width: 55px;
+	height: 28px;
+	color: #fff;
+	text-decoration: none;
+	font-size: 14px;
+	text-align: center;
+	line-height: 30px;
+}
+.login .a1 {
+	float: left;
+	border: 1px solid #666;
+}
+.login .a2 {
+	float: right;
+	background: #5580FB;
+	border: 1px solid #666;
+}
+.login .a1:hover {
+	background: #5580FB;
+}
+.fixed {
+	position: fixed;
+	top: 0;
+}
