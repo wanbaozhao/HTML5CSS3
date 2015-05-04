@@ -1,0 +1,61 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+#main {
+	width: 100%;
+	/* 宽度 */
+	
+	height: 250px;
+	/* 高度 */
+	
+	background: url(../img/360-dianji-leftright-slider/bg.png);
+	/* 背景 */
+}
+#pic {
+	width: 960px;
+	height: 212px;
+	margin: 0 auto;
+	/*上下 左右*/
+	
+	overflow: hidden;
+	/*超出隐藏*/
+	
+	position: relative;
+}
+#pic img {
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 1000px;
+}
+#nav {
+	width: 967px;
+	height: 38px;
+	margin: 0 auto;
+}
+#nav ul li {
+	list-style-type: none;
+	/*去除黑点*/
+	
+	float: left;
+	/*浮动 向左看齐*/
+	
+	width: 160px;
+	height: 38px;
+	border-left: 1px solid #fff;
+	/*border:1px solid #03f;/*边框线*/
+	
+	text-align: center;
+	/*水平居中*/
+	
+	line-height: 38px;
+	color: #fff;
+	font-family: "微软雅黑";
+}
+#nav ul .right {
+	border-right: 1px solid #fff;
+}
+#nav ul .bg {
+	background: #B5E19B;
+}

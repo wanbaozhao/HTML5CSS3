@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>360点击左右切换</title>
+		<link rel="stylesheet" href="../css/360-slider.css" />
+	</head>
+
+	<body>
+		<!--盒子模型 div-->
+		<div id="main">
+			<!--上方图片区 开始-->
+			<div id="pic">
+				<img src="../img/360-dianji-leftright-slider/1.png" style="left:0;" />
+				<img src="../img/360-dianji-leftright-slider/2.png" />
+				<img src="../img/360-dianji-leftright-slider/3.png" />
+				<img src="../img/360-dianji-leftright-slider/4.png" />
+				<img src="../img/360-dianji-leftright-slider/5.png" />
+				<img src="../img/360-dianji-leftright-slider/6.png" />
+			</div>
+			<!--上方图片区 结束-->
+
+			<!--导航 开始-->
+			<div id="nav">
+				<ul>
+					<li class="bg">360安全卫士</li>
+					<li>360杀毒</li>
+					<li>360手机卫士</li>
+					<li>360浏览器</li>
+					<li>360手机助手</li>
+					<li class="right">360企业安全产品</li>
+				</ul>
+			</div>
+			<!--导航 结束-->
+		</div>
+		<script type="text/javascript" src="../js/jQuery1.11.1.js"></script>
+		<script type="text/javascript">
+			var a = 0; //当前的序列号
+			var b = 0; //前一个序列号
+			$("#nav ul li").click(function() {
+				$(this).addClass("bg").siblings().removeClass("bg");
+				var a = $(this).index();
+				if (a > b) {
+					$("#pic img").eq(a).css("left", "960px"); //把对应的图片放到右边
+					$("#pic img").eq(a).animate({
+						left: "0"
+					}, 500); //把对应的图片移动出来
+					$("#pic img").eq(b).animate({
+						left: "-960px"
+					}, 500); //前一张图片移走
+					b = a;
+				} else if (a < b) {
+					$("#pic img").eq(a).css("left", "-960px"); //把对应的图片放到右边
+					$("#pic img").eq(a).animate({
+						left: "0"
+					}, 500); //把对应的图片移动出来
+					$("#pic img").eq(b).animate({
+						left: "960px"
+					}, 500); //前一张图片移走
+					b = a;
+				}
+			})
+		</script>
+	</body>
+
+</html>
