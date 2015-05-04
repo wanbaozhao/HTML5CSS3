@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>苹果系统相册展示台</title>
+		<link rel="stylesheet" href="../css/apple-xczht.css" />
+	</head>
+	<body>
+		<div id="box">
+		<div id="pic">
+			<img src="../img/apple-xczht/1.jpg" />
+			<img src="../img/apple-xczht/2.jpg" />
+			<img src="../img/apple-xczht/3.jpg" />
+			<img src="../img/apple-xczht/4.jpg" />
+			<img src="../img/apple-xczht/5.jpg" />
+			<img src="../img/apple-xczht/6.jpg" />
+			<img src="../img/apple-xczht/7.jpg" />
+			<img src="../img/apple-xczht/8.jpg" />
+			<img src="../img/apple-xczht/9.jpg" />
+			<img src="../img/apple-xczht/10.jpg" />
+			<img src="../img/apple-xczht/11.jpg" />
+		</div>
+	</div>
+	<div class="test"></div>
+
+	<script src="../js/jQuery1.11.1.js"></script>
+	<script>
+		var imgLen = $("img").length;
+		var lastIndex = Math.floor(imgLen/2);//初始中间图片序列号
+		var imgLeft = [];
+
+//为每个img添加初始命名
+		for(var i=0;i<imgLen;i++){
+			if(i<lastIndex){
+				$("img").eq(i).addClass("front");
+			}else if(i>lastIndex){
+				$("img").eq(i).addClass("back");
+			}else{
+				$("img").eq(i).addClass("now");
+			};
+		};
+		
+//当前图片页面居中左右排开函数
+		function mid(){
+			var oWid = $(window).width();//窗口宽度
+			var mIndex = $(".now").index();//当前图片序列号
+			$(".now").css("left",oWid/2-150+'px');//当前图片位置居中
+			//左右图片排开，再获取每个图片的left数值
+			for(var i=0;i<imgLen;i++){
+				$("img").eq(i).css("left",oWid/2-150-100*(mIndex-i)+'px');
+				imgLeft[i] = parseInt($("img").eq(i).css("left"));
+			}
+		};
+		mid();//执行
+		$(window).resize(function(){mid()});//调整窗口时再执行
+
+//点击事件
+		$("img").click(function(){
+			var nowIndex = $(this).index();
+			//所有图片位置移动
+			for(var i=0;i<imgLen;i++){
+				imgLeft[i] -= 100*(nowIndex-lastIndex);
+				$("img").eq(i).css("left",imgLeft[i]);
+			};
+	
+			for(var i=0;i<imgLen;i++){
+				if(i<nowIndex){
+					$("img").eq(i).removeClass().addClass("front");
+				}else if(i>nowIndex){
+					$("img").eq(i).removeClass().addClass("back");
+				};
+			};
+
+			lastIndex = nowIndex;//替换当前图片序列号
+			//当前图片添加类名now
+			$(this).removeClass().addClass("now").siblings().removeClass("now");
+		});
+		
+	</script>
+	</body>
+</html>
