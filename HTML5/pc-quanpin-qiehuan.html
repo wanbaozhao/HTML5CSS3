@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>PC端全屏切换效果</title>
+		<link rel="stylesheet" href="../css/pc-qp-qh.css" />
+	</head>
+	<body>
+		<div id="container">
+		<div class="section active" id="section0">
+			<div class="intro">
+				<h1 class="title">switchPage</h1>
+				<p>Create Beautiful Fullscreen Scrolling Websites</p>
+			</div>
+		</div>
+		<div class="section" id="section1">
+			<div class="intro">
+				<h1 class="title">Example</h1>
+				<p>HTML markup example to define 4 sections</p>
+				<img src="../img/pc-quanpin-qiehuan/example.png"/>
+			</div>
+			
+		</div>
+		<div class="section" id="section2">
+			<div class="intro">
+				<h1 class="title">Example</h1>
+				<p>The plug-in configuration parameters</p>
+				<img src="../img/pc-quanpin-qiehuan/example2.png"/>
+			</div>
+		</div>
+		<div class="section" id="section3">
+			<div class="intro">
+				<h1 class="title">THE END</h1>
+				<p>Everything will be okay in the end. If it's not okay, it's not the end.</p>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript" src="../js/jQuery1.11.1.js"></script>
+	<script type="text/javascript" src="../js/pc-quanpin-qiehuan/pageswitch.js"></script>
+	<script type="text/javascript">
+		$(function(){
+			$("#container").switchPage({
+				'loop' : true,
+				'keyboard' : true,
+				'direction' : 'horizontal'
+			});
+		});
+	</script>
+	</body>
+</html>
