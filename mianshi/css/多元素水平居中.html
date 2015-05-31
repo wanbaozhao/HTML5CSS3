@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>多元素水平居中</title>
+		<style>
+			/**base style**/
+			div {
+				background: #000;
+				color: #fff;
+				height: 50px;
+				width: 50px;
+				text-align: center;
+				line-height: 50px;
+				margin-left: 10px;
+			}
+			/**start here**/
+			main {
+				text-align: center;
+			}
+			div {
+				display: inline-block;
+				*display: inline;
+				/*hack IE*/
+				*zoom: 1;
+				/*hack IE*/
+			}
+		</style>
+	</head>
+	<body>
+		<main>
+			<div>
+				A
+			</div>
+			<div>
+				B
+			</div>
+			<div>
+				C
+			</div>
+			<div>
+				D
+			</div>
+		</main>
+	</body>
+</html>
